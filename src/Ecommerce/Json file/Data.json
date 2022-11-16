@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1001",
+        "images": "./image/blog-2.jpg",
+        "BookName": "The War",
+        "price": "$10",
+        "OriginalPrice": "$30"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-3.jpg",
+        "BookName": "The War",
+        "price": "$13",
+        "OriginalPrice": "$25"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-4.jpg",
+        "BookName": "The War",
+        "price": "$11",
+        "OriginalPrice": "$28"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-5.jpg",
+        "BookName": "The War",
+        "price": "$13",
+        "OriginalPrice": "$15"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-2.jpg",
+        "BookName": "The War",
+        "price": "$11",
+        "OriginalPrice": "$19"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-1.jpg",
+        "BookName": "The War",
+        "price": "$10",
+        "OriginalPrice": "$18"
+    },
+    {
+        "id": "1001",
+        "images": "../image/blog-3.jpg",
+        "BookName": "The War",
+        "price": "$9",
+        "OriginalPrice": "$15"
+    }
+]
