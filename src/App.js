@@ -1,81 +1,40 @@
-
-import './App.css';
-import NewComp from './comp1/NewComp';
-import AllData from './comp1/Array.json';
-import { useState ,useEffect} from 'react';
-import { Link , Route ,Routes } from 'react-router-dom';
-import Other from './comp1/Other';
-
-
-
-
+import React from 'react'
+import { useState ,useEffect  } from 'react'
 
 function App() {
-  const [datas, setdatas] = useState();
+  const [games , setgames] = useState([]);
+const fecthApi = async()=>{
+   const Lists = await fetch('https://api.cricapi.com/v1/cricScore?apikey=76e7f88b-f92a-4fba-b382-ca8a671ba4cd');
+  setgames(await Lists.json());
+  //  console.log(Everylist)
+}
 
-  const meradata = ()=>{
-
-    setdatas(AllData);
-  }
- useEffect(() => {
-  
- meradata();
-  
- }, [])
- 
-
+    
+   useEffect(() => {
+    
+  fecthApi();
+   }, [])
+   
 
 
 
   return (
-   <>
-     <Routes>
-         
-          <Route path='/score' element={<Other></Other>}> </Route>
+    <div>
+     {/* {
+      Object.entries(games.data).map((elem)=>{
+         console.log(elem.id)
+
+        return(<>
+       
         
-
-     </Routes>
-
-
-
+        </>)
+      })
+     } */}
 
 
 
-
-   <h1>how are you</h1>
-       {
-          datas&&datas.map(x=>{
-            return(
-              <>
-              <div className='abc' id={x.id}>
-
-                {     
-
-              (x.id==="1002")?(""):(
-              
-              
-                
-              
-              <NewComp name = {x.name}  index = {x.id}  send = {AllData}/>
-             
-              )
-               
-            } </div>
-              
-             
-              
-              </>
-            )
-            
-          })
-
-       }
-
-
-   
-   
-   </>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App

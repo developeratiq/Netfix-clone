@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 // import UserR from './UserR';
@@ -10,19 +10,38 @@ import { BrowserRouter } from 'react-router-dom';
 // import TechnicalRound from './technicalRound'
 // import Ecommerce from './Ecommerce';
 import App1 from './App1';
+import Allcomp from './Cric/Allcomp';
+
+import { Auth0Provider } from "@auth0/auth0-react";
+
+
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    <BrowserRouter>
-   {/* <App /> */}
+  
+  <Auth0Provider
+    domain="dev-h3tcjmayto0aak58.us.auth0.com"
+    clientId="tt6g4pbL27MrF9lHq04DNGxylNVQXQp5"
+    redirectUri={window.location.origin}
+  >
+    <Allcomp/>
+    
+  </Auth0Provider>,
+
+
+
+   
    {/* <UserR></UserR> */}
   {/* <Refhooks></Refhooks>
    */}
    {/* <Check></Check> */}
    {/* <TechnicalRound></TechnicalRound> */}
    {/* <Ecommerce></Ecommerce> */}
-     <App1></App1>
+     {/* <App1></App1> */}
 
 
    </BrowserRouter>

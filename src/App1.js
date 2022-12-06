@@ -4,7 +4,9 @@
 
 
 import React from 'react'
-import Nav from './Netflix clone/Nav/Nav'
+// import Header from './Netflix clone/header/Header'
+
+// import Nav from './Netflix clone/Nav/Nav'
 
  
 
@@ -16,8 +18,10 @@ function App1() {
   return (
      <>
     
-        
+{/*         
         <Nav/>
+        <Header/> */}
+        
         
 
 

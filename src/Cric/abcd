@@ -1,0 +1,27 @@
+ <section className='cardsection' >
+                     <div class="card">
+                        <h5 class="card-header">{cb.matchType}<span className='date'>{cb.date} </span></h5>
+                        {(cb.matchEnded === true) ? (<button className='statusButton'>Completed</button>) : (<button className='live'>Live🟢</button>)}
+
+                        <div class="card-body">
+                           <h5 class="card-title">{cb.name}  </h5>
+                           <p class="card-text complete"> {cb.status}</p>
+                           {
+                              cb.score && cb.score.map((sc) => {
+                                 return (
+                                    <>
+                                       <h5 class="card-title">  {sc.inning}: &nbsp; &nbsp;{sc.r}/{sc.w}  : &nbsp; {sc.o}-Overs  </h5>
+                                    </>
+                                 )
+                              })
+                           }
+
+                        </div>
+                        <button onClick={managePopUp}>getdet</button>
+
+                        <Popup trigger={toggle} settrigger = {settoggle}></Popup>
+                     </div>
+
+
+
+                  </section>
